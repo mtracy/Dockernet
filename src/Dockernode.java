@@ -74,7 +74,7 @@ public class Dockernode implements Runnable {
 		InputStream in = s.getInputStream();
 		BufferedReader bin = new BufferedReader(new InputStreamReader(in));
 		String response = bin.readLine();
-		System.out.println("Client got " + response);
+		System.out.println("Client got: " + response);
 
 	}
 
@@ -131,19 +131,11 @@ public class Dockernode implements Runnable {
 	}
 
 	public static void main(String[] args) throws URISyntaxException, IOException {
-		URI u1 = new URI("http://127.0.0.1:8197");
-		URI u2 = new URI("http://127.0.0.1:8198");
+		URI u1 = new URI(args[0]);
 		Dockernode n1 = new Dockernode(u1);
-		Dockernode n2 = new Dockernode(u2);
 		n1.startServing();
-		n2.startServing();
-		n1.createSocket(u2);
 
-		n1.say(u2, "Howdy partner!");
-		n1.listen(u2);
-
-		n1.close();
-		n2.close();
+		//n1.close();
 
 	}
 
