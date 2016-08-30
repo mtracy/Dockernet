@@ -1,0 +1,27 @@
+{
+  "name": "dockernet",
+  "version": "1.0.0",
+  "description": "simple cluster of node servers in docker",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtracy/Dockernet.git"
+  },
+  "keywords": [
+    "Docker",
+    "node",
+    "cluster"
+  ],
+  "author": "Mitchell Tracy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mtracy/Dockernet/issues"
+  },
+  "homepage": "https://github.com/mtracy/Dockernet#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
